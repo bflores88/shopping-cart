@@ -93,7 +93,6 @@ document.getElementById('itemImg5').src = 'images/hugpill.jpg'
 
 var subBox = document.createElement('div');
 subBox.className = 'subBox';
-subBox.className = 'itemBox';
 subBox.style.borderTop = '1px solid lightgrey';
 cartItems.appendChild(subBox);
 
