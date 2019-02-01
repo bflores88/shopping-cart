@@ -1,0 +1,69 @@
+body{
+    display: block;
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+    
+}
+
+h3{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+#header{
+    background-color: orange;
+    width: 100vw;
+    height: 100px;
+    color: #A86A14;
+
+}
+
+#cartItems{
+    width: 75vw;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.itemBox{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemDescr {
+    color: grey;
+    font-size: 14px;
+
+}
+
+.prodImg{
+    height: 75px;
+    width: 75px;
+    border: 1px dotted lightslategray;
+    margin-right: 10px;
+}
+
+.itemPrice {
+    color: grey;
+    font-size: 20px;
+    margin-left: 10px;
+    text-align: right;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.nameDescr{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.shopItemBox{
+    display: flex;
+    
+}
+
