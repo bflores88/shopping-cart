@@ -40,6 +40,8 @@ var shopCart = [{
 
 // console.log(shopCart.length);
 
+var sumTotal = 0;
+
 for (var i = 0; i<shopCart.length; i++) {
     var shopItemBox = document.createElement('div');
     shopItemBox.className = 'itemBox';
@@ -63,7 +65,6 @@ for (var i = 0; i<shopCart.length; i++) {
 
     var itemBoxDescr = document.createElement('div');
     itemBoxDescr.className = 'itemDescr';
-    itemBoxDescr.style.display = 'inline';
     itemBoxDescr.innerHTML = shopCart[i].description;
     prodDiv.appendChild(itemBoxDescr);
 
@@ -72,6 +73,8 @@ for (var i = 0; i<shopCart.length; i++) {
     itemBoxPrice.innerHTML = shopCart[i].price;
     shopItemBox.appendChild(itemBoxPrice);
 
+    sumTotal += shopCart[i].price;
+
     
     }
 
@@ -79,4 +82,47 @@ document.getElementById('itemImg0').src = 'images/fingerBrush.jpg';
 
 document.getElementById('itemImg1').src = 'images/barryhits.jpg';
 
-document.getElementById('itemImg2').src = 'images/ramenoreo.jpeg'
+document.getElementById('itemImg2').src = 'images/ramenoreo.jpeg';
+
+document.getElementById('itemImg3').src = 'images/woofwash.jpg';
+
+document.getElementById('itemImg4').src = 'images/saunapants.jpg';
+
+document.getElementById('itemImg5').src = 'images/hugpill.jpg'
+
+
+var subBox = document.createElement('div');
+subBox.className = 'subBox';
+subBox.className = 'itemBox';
+subBox.style.borderTop = '1px solid lightgrey';
+cartItems.appendChild(subBox);
+
+var divSpace = document.createElement('div');
+divSpace.id = 'spacer';
+subBox.appendChild(divSpace);
+
+var subTotal = document.createElement('div');
+subTotal.className = 'subtotal';
+subTotal.innerHTML = 'Subtotal';
+subBox.appendChild(subTotal);
+
+
+var subAmt = document.createElement('div');
+subAmt.className = 'subtotalAmt';
+subAmt.innerHTML = sumTotal;
+subBox.appendChild(subAmt);
+
+var descArr = document.getElementsByClassName('itemBox');
+
+for (var i=0; i<descArr.length; i++){
+    descArr[i].addEventListener('click', showDescr)
+}
+
+function showDescr(){
+    var showWords = this.querySelectorAll('.itemDescr')[0];
+    if(showWords.style.display === 'none'){
+        showWords.style.display = 'block';
+    } else {
+        showWords.style.display = 'none';
+    }
+}

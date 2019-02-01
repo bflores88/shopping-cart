@@ -2,12 +2,18 @@ body{
     display: block;
     margin: 0;
     font-family: 'Heebo', sans-serif;
+    color: 	#696969;
+    margin-bottom: 100px;
     
 }
 
 h3{
     margin-top: 0px;
     margin-bottom: 5px;
+}
+
+#spacer{
+    width: 87px;
 }
 
 #header{
@@ -33,6 +39,8 @@ h3{
 .itemDescr {
     color: grey;
     font-size: 14px;
+    width: 50vw;
+    display: none;
 
 }
 
@@ -65,5 +73,28 @@ h3{
 .shopItemBox{
     display: flex;
     
+}
+
+.subtotal{
+    font-size: 20px;
+    font-weight: bold;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtotalAmt {
+    color: grey;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    text-align: right;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+
 }
 
