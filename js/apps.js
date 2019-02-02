@@ -13,26 +13,32 @@ headerWords.innerHTML = 'Shopping Cart';
 header.appendChild(headerWords);
 
 var shopCart = [{
+    image: 'images/fingerBrush.jpg',
     product: "Finger Toothbrush",
     description: "A helping hand to a nicer smile.",
     price: 1.11
 }, {
+    image: 'images/barryhits.jpg',
     product: "Barry Manilow's Greatest Hits Collection Vol 1",
     description: "Music the way it should be! Reminisce the past glory as your ship to happiness has sailed.",
     price: 39.57
 }, {
+    image: 'images/ramenoreo.jpeg',
     product: "Ramen Oreos",
     description: "The overly used cliche 'East Meets West' comes to life as Nabisco has infused the savory flavors of the Far East sandwiched between two chocolate wafers. Dip that in your sake.",
     price: 8.88
 }, {
+    image: 'images/woofwash.jpg',
     product: "Woof Washer 360",
     description: "Wash your dirty stinky mutt in minutes! Water and dog not included.",
     price: 9.29
 }, {
+    image: 'images/saunapants.jpg',
     product: "Sauna Pants",
     description: "Is it hot in here? Indeed. It's my pants. Look cool while losing weight.",
     price: 2.33
 }, {
+    image: 'images/hugpill.jpg',
     product: "Hug Me Pillow",
     description: "No more lonely nights as you snuggle with your best friend. And it will never walk out on you.",
     price: 599.99
@@ -50,6 +56,7 @@ for (var i = 0; i<shopCart.length; i++) {
 
     var shopItemImg = document.createElement('img');
     shopItemImg.id = 'itemImg' + i;
+    shopItemImg.src = shopCart[i].image;
     shopItemImg.className = 'prodImg'
     shopItemImg.style.float = 'left';
     shopItemBox.appendChild(shopItemImg);
@@ -70,7 +77,7 @@ for (var i = 0; i<shopCart.length; i++) {
 
     var itemBoxPrice = document.createElement('div');
     itemBoxPrice.className = 'itemPrice';
-    itemBoxPrice.innerHTML = shopCart[i].price;
+    itemBoxPrice.innerHTML = '$' + shopCart[i].price;
     shopItemBox.appendChild(itemBoxPrice);
 
     sumTotal += shopCart[i].price;
@@ -78,17 +85,17 @@ for (var i = 0; i<shopCart.length; i++) {
     
     }
 
-document.getElementById('itemImg0').src = 'images/fingerBrush.jpg';
+// document.getElementById('itemImg0').src = 'images/fingerBrush.jpg';
 
-document.getElementById('itemImg1').src = 'images/barryhits.jpg';
+// document.getElementById('itemImg1').src = 'images/barryhits.jpg';
 
-document.getElementById('itemImg2').src = 'images/ramenoreo.jpeg';
+// document.getElementById('itemImg2').src = 'images/ramenoreo.jpeg';
 
-document.getElementById('itemImg3').src = 'images/woofwash.jpg';
+// document.getElementById('itemImg3').src = 'images/woofwash.jpg';
 
-document.getElementById('itemImg4').src = 'images/saunapants.jpg';
+// document.getElementById('itemImg4').src = 'images/saunapants.jpg';
 
-document.getElementById('itemImg5').src = 'images/hugpill.jpg'
+// document.getElementById('itemImg5').src = 'images/hugpill.jpg'
 
 
 var subBox = document.createElement('div');
@@ -108,7 +115,7 @@ subBox.appendChild(subTotal);
 
 var subAmt = document.createElement('div');
 subAmt.className = 'subtotalAmt';
-subAmt.innerHTML = sumTotal;
+subAmt.innerHTML = '$' + sumTotal;
 subBox.appendChild(subAmt);
 
 var descArr = document.getElementsByClassName('itemBox');
